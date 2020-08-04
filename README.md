@@ -1,6 +1,10 @@
 # scala-playground
 
-## run sbt build
+## develop with IntelliJ IDEA
+
+Initialize this project with "Open or Import" as sbt project (not to start with "New Project")
+
+## build with sbt
 
 ### build executable jar file
 
