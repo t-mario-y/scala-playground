@@ -1,3 +1,5 @@
+package playground
+
 import spray.json._
 
 trait MyJsonProtocol extends DefaultJsonProtocol {

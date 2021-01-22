@@ -1,3 +1,5 @@
+package playground
+
 import scala.util.{Failure, Success, Try}
 
 object TrySample {
