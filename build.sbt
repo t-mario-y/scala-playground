@@ -22,7 +22,7 @@ lazy val buildSettings = Seq(
     val artifactTargetPath = s"/app/${artifact.name}"
 
     new Dockerfile {
-      from("openjdk:8-jre")
+      from("adoptopenjdk/openjdk11:jre-11.0.8_10")
       add(artifact, artifactTargetPath)
       entryPoint("java", "-jar", artifactTargetPath)
     }
