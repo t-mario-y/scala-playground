@@ -14,7 +14,8 @@ lazy val root = (project in file("."))
   .settings(buildSettings)
   .settings(
     imageNames in docker := Seq(ImageName("scala-playground:latest"))
-  ).enablePlugins(DockerPlugin)
+  )
+  .enablePlugins(DockerPlugin)
 
 lazy val buildSettings = Seq(
   dockerfile in docker := {
