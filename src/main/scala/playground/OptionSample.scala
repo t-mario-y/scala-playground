@@ -3,19 +3,19 @@ package playground
 object OptionSample {
   val maybeInt: Option[Int] = Some(3)
 
-  def maybeAdd(maybeInt: Option[Int]): Option[Int] = {
+  def maybePlusOne(maybeInt: Option[Int]): Option[Int] = {
     if(maybeInt.isDefined)
       Option(maybeInt.get + 1)
     else
       maybeInt
   }
 
-  def maybeAddWithMap(maybeInt: Option[Int]): Option[Int] = {
+  def maybePlusOneWithMap(maybeInt: Option[Int]): Option[Int] = {
     // x.map(i => i + 1) はこのように書ける
     maybeInt.map(_ + 1)
   }
 
-  def maybeAddWithFlatMap(maybeInt: Option[Int]) = {
+  def maybePlusOneWithFlatMap(maybeInt: Option[Int]): Option[Int] = {
     maybeInt.flatMap(a => Option(a + 1))
   }
 
@@ -44,7 +44,7 @@ object OptionSample {
     } yield x + 1
   }
 
-  maybeAdd(maybeInt)
+  maybePlusOne(maybeInt)
 
   // Option(something)のままsomethingを処理する
   val mayParsableInt: Option[String] = Some("1")
